@@ -11,5 +11,4 @@ npm-debug.*
 package-lock.json
 dist/
 app/css/*
-/lesson1
 
