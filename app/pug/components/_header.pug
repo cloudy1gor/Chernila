@@ -1,0 +1,29 @@
+header.header
+  .container
+    nav.menu
+      a.logo(href="#")
+        svg.logo__img
+          use(xlink:href="images/dest/sprite.svg#logo")
+
+      ul.menu__list
+        li.menu__item
+          a.menu__link(href="#") О нас
+        li.menu__item
+          a.menu__link(href="#") Портфоллио
+        li.menu__item
+          a.menu__link(href="#") Команда
+        li.menu__item
+          a.menu__link(href="#") Блог
+        li.menu__item
+          a.menu__link(href="#") Контакты
+
+        button.menu__btn
+          svg
+            use(xlink:href="images/dest/sprite.svg#menubtn")
+
+    .header__content
+      .header__inner
+        h1.header__title Чернила
+        span.header__subtitle Искуство на твоем теле
+        a.order.header__order(href="#") Записаться к мастеру
+
