@@ -1,16 +1,48 @@
 // Fonts styles
 @font-face {
-  src: url("../fonts/DMSans-Regular.woff2") format("woff2"),
-    url("../fonts/DMSans-Regular.woff") format("woff");
-  font-family: "DMSans-Regular";
+  src: url("../fonts/Merriweather-italic.woff2") format("woff2"),
+    url("../fonts/Merriweather-italic.woff") format("woff");
+  font-family: "Merriweather-italic";
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-family: "Montserrat-Medium";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-family: "Montserrat-SemiBold";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  src: url("../fonts/OpenSans-Light.woff2") format("woff2"),
+    url("../fonts/OpenSans-Light.woff") format("woff");
+  font-family: "OpenSans-Light";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-family: "OpenSans-Regular";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  src: url("../fonts/DMSans-Bold.woff2") format("woff2"),
-    url("../fonts/DMSans-Bold.woff") format("woff");
-  font-family: "DMSans-Bold";
+  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"),
+    url("../fonts/Raleway-SemiBold.woff") format("woff");
+  font-family: "Raleway-SemiBold";
   font-weight: 700;
   font-style: normal;
   font-display: swap;

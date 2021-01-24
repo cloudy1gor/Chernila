@@ -1,0 +1,41 @@
+.team {
+  margin-bottom: 100px;
+  background-color: #fff;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  &__item {
+    padding: 25px 15px;
+    max-width: 300px;
+    background-color: $bg-color;
+    transition: transform 0.6s;
+
+    &:hover {
+      transform: translateY(-15px);
+    }
+
+    span {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    margin-bottom: 15px;
+    max-width: 270px;
+    object-fit: contain;
+  }
+
+  &__name {
+    font-size: 18px;
+    text-align: left;
+    color: $title-color;
+    @extend %m500;
+  }
+}

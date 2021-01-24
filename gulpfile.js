@@ -23,8 +23,7 @@ const ttf2woff = require("gulp-ttf2woff");
 const ttf2eot = require("gulp-ttf2eot");
 
 const jsFiles = [
-  "node_modules/jquery/dist/jquery.js",
-  "node_modules/aos/dist/aos.js",
+  "node_modules/swiper/swiper-bundle.js",
   "!app/js/main.min.js",
   "app/js/main.js",
 ];

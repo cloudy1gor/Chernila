@@ -1,16 +1,36 @@
 // Variables
-$accent-color: #436372;
-$default-color: #585858;
-$title-color: #243f4d;
-$btn-color: #a3bbc8;
-$bg-color: #fcd7b6;
+$accent-color: #fcbb08;
+$default-color: #373a39;
+$title-color: #242121;
+$bg-color: #f6f8fa;
 
-%dms-regular {
-  font-family: "DMSans-Regular", sans-serif;
+%mw {
+  font-family: "Merriweather-italic", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+%m500 {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-weight: 500;
+}
+
+%m700 {
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-weight: 700;
+}
+
+%o300 {
+  font-family: "OpenSans-Light", sans-serif;
+  font-weight: 300;
+}
+
+%o400 {
+  font-family: "OpenSans-Regular", sans-serif;
   font-weight: 400;
 }
 
-%dms-bold {
-  font-family: "DMSans-Bold", sans-serif;
+%r700 {
+  font-family: "Raleway-SemiBold", sans-serif;
   font-weight: 700;
 }

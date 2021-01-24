@@ -11,3 +11,16 @@
     transform: scale(1);
   }
 }
+@keyframes hide {
+  0% {
+    visibility: visible;
+  }
+
+  100% {
+    margin: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+  }
+}

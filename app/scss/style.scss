@@ -1,9 +1,13 @@
-@import "libs";
 @import "reset";
+@import "libs";
 @import "vars";
 @import "mixin";
 @import "fonts";
 @import "global";
+@import "animations";
 @import "pages/404";
 @import "components/header";
+@import "components/info";
+@import "components/team";
+@import "components/portfolio";
 @import "components/footer";

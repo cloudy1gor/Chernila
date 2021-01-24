@@ -1,29 +1,58 @@
 header.header
-  .container
     nav.menu
-      a.logo(href="#")
-        svg.logo__img
-          use(xlink:href="images/dest/sprite.svg#logo")
+      .container
+        .menu__inner
+          a.logo(href="#")
+            svg.logo__img
+              use(xlink:href="images/dest/sprite.svg#skull")
+            span.logo__text Чернила
 
-      ul.menu__list
-        li.menu__item
-          a.menu__link(href="#") О нас
-        li.menu__item
-          a.menu__link(href="#") Портфоллио
-        li.menu__item
-          a.menu__link(href="#") Команда
-        li.menu__item
-          a.menu__link(href="#") Блог
-        li.menu__item
-          a.menu__link(href="#") Контакты
+          ul.menu__list
+            li.menu__item
+              a.menu__link(href="#") О нас
+            li.menu__item
+              a.menu__link(href="#") Портфоллио
+            li.menu__item
+              a.menu__link(href="#") Команда
+            li.menu__item
+              a.menu__link(href="#") Блог
+            li.menu__item
+              a.menu__link(href="#") Контакты
 
-        button.menu__btn
-          svg
-            use(xlink:href="images/dest/sprite.svg#menubtn")
+            button.menu__btn
+              svg
+                use(xlink:href="images/dest/sprite.svg#menu")
 
-    .header__content
-      .header__inner
-        h1.header__title Чернила
-        span.header__subtitle Искуство на твоем теле
-        a.order.header__order(href="#") Записаться к мастеру
+    .header__inner
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            img.header__pic(src="images/dest/header-bg.jpg", alt="Слайд")
+          .swiper-slide
+            img.header__pic(src="images/dest/header-bg3.jpg", alt="Слайд")
+            
+      .header__content
+        .container
+          .header__info
+            h1.header__title Чернила
+            span.header__subtitle Искуство на твоем теле
+
+            ul.social
+              li.social__item
+                a.social__link(href="#") 
+                  svg
+                    use(xlink:href="images/dest/sprite.svg#i")
+              li.social__item
+                a.social__link(href="#") 
+                  svg
+                    use(xlink:href="images/dest/sprite.svg#p")
+              li.social__item
+                a.social__link(href="#")
+                  svg
+                    use(xlink:href="images/dest/sprite.svg#f")
+              li.social__item
+                a.social__link(href="#")
+                  svg
+                    use(xlink:href="images/dest/sprite.svg#t")
+
 

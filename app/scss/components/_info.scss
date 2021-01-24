@@ -1,0 +1,32 @@
+.info {
+  margin-bottom: 100px;
+  padding: 100px 0 50px;
+  background-color: $bg-color;
+
+  &__inner {
+    @include bg($size: 40%, $position: left center);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    margin-left: auto;
+    max-width: 50%;
+  }
+
+  &__list {
+    margin: 35px 0;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__text::first-letter {
+    margin-right: 2px;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 17px;
+    color: $accent-color;
+  }
+}

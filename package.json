@@ -35,12 +35,13 @@
     "gulp-uglify-es": "^2.0.0",
     "imagemin-jpeg-recompress": "^7.0.0",
     "imagemin-pngquant": "^9.0.1",
-    "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",
     "stylelint": "^13.7.2",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^6.4.8"
+  }
 }

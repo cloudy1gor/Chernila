@@ -12,8 +12,12 @@ html {
 }
 
 body {
+  min-height: 100vh;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
   color: $default-color;
-  @extend %dms-regular;
+  @extend %o300;
 }
 
 .wrapper {
@@ -28,25 +32,113 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1230px;
+  padding: 0 10px;
+  max-width: 1190px;
 }
 
-// кноака наверх
-.up {
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  color: $accent-color;
+
+  &::after {
+    @include pseudo();
+    left: 60px;
+    bottom: 8px;
+    width: 40px;
+    height: 2px;
+    background-color: $title-color;
+  }
+
+  &:hover {
+    &::after {
+      background-color: $accent-color;
+    }
+
+    .logo__text {
+      color: $title-color;
+    }
+  }
+
+  &__img {
+    margin-right: 5px;
+    max-width: 55px;
+    max-height: 55px;
+  }
+
+  &__text {
+    font-size: 24px;
+    color: $accent-color;
+    transition: all 0.6s;
+    @extend %mw;
+  }
+}
+
+.title {
+  position: relative;
+  align-self: flex-start;
+  margin-bottom: 60px;
+  padding-bottom: 18px;
+  font-size: 60px;
+  line-height: 75px;
+  letter-spacing: -1.65px;
+  color: $title-color;
+
+  &::after {
+    @include pseudo();
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: $accent-color;
+  }
+  @extend %m700;
+}
+
+.call {
   position: fixed;
-  right: 30px;
-  bottom: 30px;
-  z-index: 999;
-  display: none;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
+  right: 25px;
+  bottom: 25px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  min-width: 55px;
+  min-height: 55px;
+  background-color: $accent-color;
+  opacity: 0.8;
+  transition: background-color 0.6s;
+
+  &:hover {
+    background-color: #008000;
+  }
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
 
   &--animated {
-    animation-name: up;
-    animation-duration: 2s;
+    animation-name: "up";
+    animation-duration: 1.5s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
   }
+}
+
+.swiper-wrapper {
+  max-height: 700px;
+}
+
+.anime {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.hide {
+  animation: "hide" 0.5s forwards;
 }
