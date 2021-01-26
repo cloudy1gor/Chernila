@@ -56,47 +56,48 @@ html(lang="ru")
             .portfolio__header
               .container
                 h2.title.portfolio__title Портфолио
-                .portfolio__filter
-                  button.portfolio__btn.all(type= "button") Все
-                  button.portfolio__btn.k(type= "button") Кисти
-                  button.portfolio__btn.r(type= "button") Рукава
-                  button.portfolio__btn.s(type= "button") Спина
-                  button.portfolio__btn.n(type= "button") Ноги
+                nav
+                  ul.portfolio__filter
+                    li.portfolio__btn.all(type= "button" data-f="all") Все
+                    li.portfolio__btn(type= "button" data-f="k") Кисти
+                    li.portfolio__btn(type= "button" data-f="r") Рукава
+                    li.portfolio__btn(type= "button" data-f="s") Спина
+                    li.portfolio__btn(type= "button" data-f="n") Ноги
             
-            ul.portfolio__content
-              li.portfolio__item.r
+            .portfolio__content
+              .portfolio__item.r
                 img.portfolio__img(src="images/dest/portfolio/r.jpg", alt="Картинка")
                 a.order.portfolio__order(href="tel:+3806765252222") Записаться
                 
-              li.portfolio__item.s
+              .portfolio__item.s
                 img.portfolio__img(src="images/dest/portfolio/sp.jpg", alt="Картинка")
                 a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
-              li.portfolio__item.r
+              .portfolio__item.r
                 img.portfolio__img(src="images/dest/portfolio/r2.jpg", alt="Картинка")
                 a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
-              li.portfolio__item.s
+              .portfolio__item.s
                 img.portfolio__img(src="images/dest/portfolio/sp2.jpg", alt="Картинка")
                 a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
-              li.portfolio__item.r
+              .portfolio__item.r
                 img.portfolio__img(src="images/dest/portfolio/r3.jpg", alt="Картинка")
                 a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
-              li.portfolio__item.n
+              .portfolio__item.n
                 img.portfolio__img(src="images/dest/portfolio/n.jpg", alt="Картинка")
                 a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
-              li.portfolio__item.k
+              .portfolio__item.k
                 img.portfolio__img(src="images/dest/portfolio/k.jpg", alt="Картинка")
                 a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
-              li.portfolio__item.n
+              .portfolio__item.n
                 img.portfolio__img(src="images/dest/portfolio/n2.jpg", alt="Картинка")
                 a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
-              li.portfolio__item.k
+              .portfolio__item.k
                 img.portfolio__img(src="images/dest/portfolio/k.jpg", alt="Картинка")
                 a.order.portfolio__order(href="tel:+3806765252222") Записаться 
             a.portfolio__more Показать больше работ
@@ -122,12 +123,12 @@ html(lang="ru")
               form.contact__form(action="#")
                 input.contact__input(type="text", placeholder="ИМЯ")                
                 input.contact__input(type="text", placeholder="EMAIL")   
-                textarea.contact__text(placeholder="ВАШЕ СООБЩЕНИЕ", cols="30", rows="10")
+                textarea.contact__text(placeholder="ВАШЕ СООБЩЕНИЕ", cols="30", rows="10", wrap="off")
                 button.contact__btn(type="submit")   
 
               .contact__map#map
 
-            address.contact__address просрект Победы, 42а
+            address.contact__address улица Тобольская, 42а
           
 
         

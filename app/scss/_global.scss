@@ -44,6 +44,21 @@ body {
   margin-right: 10px;
   color: $accent-color;
 
+  &--footer {
+    display: block;
+    margin: 0 auto 30px;
+    max-width: 50px;
+  }
+
+  &.logo--footer::after {
+    width: 0;
+    height: 0;
+  }
+
+  &__img--footer {
+    fill: #fff;
+  }
+
   &::after {
     @include pseudo();
     left: 60px;
@@ -134,11 +149,19 @@ body {
   max-height: 700px;
 }
 
-.anime {
-  opacity: 0;
-  transform: scale(0);
-}
-
 .hide {
-  animation: "hide" 0.5s forwards;
+  opacity: 1;
+  animation-name: a1;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes a1 {
+  to {
+    opacity: 0;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
 }

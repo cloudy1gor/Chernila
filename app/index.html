@@ -107,26 +107,28 @@
           <div class="portfolio__header">
             <div class="container">
               <h2 class="title portfolio__title">Портфолио</h2>
-              <div class="portfolio__filter">
-                <button class="portfolio__btn all" type="button">Все</button>
-                <button class="portfolio__btn k" type="button">Кисти</button>
-                <button class="portfolio__btn r" type="button">Рукава</button>
-                <button class="portfolio__btn s" type="button">Спина</button>
-                <button class="portfolio__btn n" type="button">Ноги</button>
-              </div>
+              <nav>
+                <ul class="portfolio__filter">
+                  <li class="portfolio__btn all" type="button" data-f="all">Все</li>
+                  <li class="portfolio__btn" type="button" data-f="k">Кисти</li>
+                  <li class="portfolio__btn" type="button" data-f="r">Рукава</li>
+                  <li class="portfolio__btn" type="button" data-f="s">Спина</li>
+                  <li class="portfolio__btn" type="button" data-f="n">Ноги</li>
+                </ul>
+              </nav>
             </div>
           </div>
-          <ul class="portfolio__content">
-            <li class="portfolio__item r"><img class="portfolio__img" src="images/dest/portfolio/r.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться</a></li>
-            <li class="portfolio__item s"><img class="portfolio__img" src="images/dest/portfolio/sp.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></li>
-            <li class="portfolio__item r"><img class="portfolio__img" src="images/dest/portfolio/r2.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></li>
-            <li class="portfolio__item s"><img class="portfolio__img" src="images/dest/portfolio/sp2.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></li>
-            <li class="portfolio__item r"><img class="portfolio__img" src="images/dest/portfolio/r3.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></li>
-            <li class="portfolio__item n"><img class="portfolio__img" src="images/dest/portfolio/n.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></li>
-            <li class="portfolio__item k"><img class="portfolio__img" src="images/dest/portfolio/k.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></li>
-            <li class="portfolio__item n"><img class="portfolio__img" src="images/dest/portfolio/n2.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></li>
-            <li class="portfolio__item k"><img class="portfolio__img" src="images/dest/portfolio/k.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></li>
-          </ul><a class="portfolio__more">Показать больше работ</a>
+          <div class="portfolio__content">
+            <div class="portfolio__item r"><img class="portfolio__img" src="images/dest/portfolio/r.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться</a></div>
+            <div class="portfolio__item s"><img class="portfolio__img" src="images/dest/portfolio/sp.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></div>
+            <div class="portfolio__item r"><img class="portfolio__img" src="images/dest/portfolio/r2.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></div>
+            <div class="portfolio__item s"><img class="portfolio__img" src="images/dest/portfolio/sp2.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></div>
+            <div class="portfolio__item r"><img class="portfolio__img" src="images/dest/portfolio/r3.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></div>
+            <div class="portfolio__item n"><img class="portfolio__img" src="images/dest/portfolio/n.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></div>
+            <div class="portfolio__item k"><img class="portfolio__img" src="images/dest/portfolio/k.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></div>
+            <div class="portfolio__item n"><img class="portfolio__img" src="images/dest/portfolio/n2.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></div>
+            <div class="portfolio__item k"><img class="portfolio__img" src="images/dest/portfolio/k.jpg" alt="Картинка"/><a class="order portfolio__order" href="tel:+3806765252222">Записаться </a></div>
+          </div><a class="portfolio__more">Показать больше работ</a>
         </section>
         <section class="price">
           <div class="container">
@@ -152,28 +154,30 @@
               <form class="contact__form" action="#">
                 <input class="contact__input" type="text" placeholder="ИМЯ"/>
                 <input class="contact__input" type="text" placeholder="EMAIL"/>
-                <textarea class="contact__text" placeholder="ВАШЕ СООБЩЕНИЕ" cols="30" rows="10"></textarea>
+                <textarea class="contact__text" placeholder="ВАШЕ СООБЩЕНИЕ" cols="30" rows="10" wrap="off"></textarea>
                 <button class="contact__btn" type="submit">  </button>
               </form>
               <div class="contact__map" id="map"></div>
             </div>
-            <address class="contact__address">просрект Победы, 42а</address>
+            <address class="contact__address">улица Тобольская, 42а</address>
           </div>
         </section>
       </main>
-      <footer class="footer"><a class="logo" href="#">
-          <svg class="logo__img logo__img--footer">
-            <use xlink:href="images/dest/sprite.svg#skull"></use>
-          </svg></a>
-        <ul class="footer__social">
-          <li class="footer__item"><a class="footer__link" href="#">FACEBOOK</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">INSTAGRAM</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">TWITTER</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">PINTEREST</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">DRIBBLE</a></li>
-        </ul>
-        <address class="footer__address"><span class="footer__text">Украина, Харьков ул. Тобольская, 12a</span><a class="footer__tel" href="tel:+3806765252222">(38067) 65 252 222</a><a href="mailto:info@mail.com">info@mail.com</a></address>
-        <div class="footer__bottom"><span>@2021 Чернила</span></div>
+      <footer class="footer">
+        <div class="container"><a class="logo logo--footer" href="#">
+            <svg class="logo__img logo__img--footer">
+              <use xlink:href="images/dest/sprite.svg#skull"></use>
+            </svg></a>
+          <ul class="footer__social">
+            <li class="footer__item"><a class="footer__link" href="#">FACEBOOK</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">INSTAGRAM</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">TWITTER</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">PINTEREST</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">DRIBBLE</a></li>
+          </ul>
+          <address class="footer__address"><span class="footer__text">Украина, Харьков ул. Тобольская, 12a</span><a class="footer__tel" href="tel:+3806765252222">(38067) 65 252 222</a><a class="footer__mail" href="mailto:info@mail.com">info@mail.com</a></address>
+          <div class="footer__bottom"><span>@2021 Чернила</span></div>
+        </div>
       </footer>
     </div>
     <script src="js/main.min.js"></script>

@@ -11,39 +11,19 @@ var mySwiper = new Swiper(".swiper-container", {
 });
 
 //фильтрация
-function app() {
-  const buttons = document.querySelectorAll(".portfolio__btn");
-  const cards = document.querySelectorAll(".portfolio__item");
+const filterBox = document.querySelectorAll(".portfolio__item");
 
-  function filter(category, items) {
-    items.forEach((item) => {
-      const isItemFiltered = !item.classList.contains(category);
-      const isShowAll = category.toLowerCase() === "all";
-      if (isItemFiltered && !isShowAll) {
-        item.classList.add("anime");
-      } else {
-        item.classList.remove("hide");
-        item.classList.remove("anime");
-      }
-    });
-  }
+document.querySelector("nav").addEventListener("click", (event) => {
+  if (event.target.tagName !== "LI") return false;
+  let filterClass = event.target.dataset["f"];
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const currentCategory = button.dataset.filter;
-      filter(currentCategory, cards);
-    });
+  filterBox.forEach((elem) => {
+    elem.classList.remove("hide");
+    if (!elem.classList.contains(filterClass) && filterClass !== "all") {
+      elem.classList.add("hide");
+    }
   });
-
-  cards.forEach((card) => {
-    card.ontransitionend = function () {
-      if (card.classList.contains("anime")) {
-        card.classList.add("hide");
-      }
-    };
-  });
-}
-app();
+});
 
 // карта
 // When the window has finished loading create our google map below
@@ -54,10 +34,10 @@ function init() {
   // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
   var mapOptions = {
     // How zoomed in you want the map to start at (always required)
-    zoom: 11,
+    zoom: 16,
 
     // The latitude and longitude to center the map (always required)
-    center: new google.maps.LatLng(40.67, -73.94), // New York
+    center: new google.maps.LatLng(50.03134760058979, 36.22320154024285), // New York
 
     // How you would like to style the map.
     // This is where you would paste any style found on Snazzy Maps.
@@ -137,7 +117,7 @@ function init() {
 
   // Let's also add a marker while we're at it
   var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(40.67, -73.94),
+    position: new google.maps.LatLng(50.03134760058979, 36.22320154024285),
     map: map,
     title: "Snazzy!",
   });
