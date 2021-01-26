@@ -3,7 +3,8 @@ html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="css/style.min.css")
+    link(href="css/style.min.css", rel="stylesheet")
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     title Chernila
   body
     .wrapper
@@ -46,9 +47,12 @@ html(lang="ru")
                 img.team__img(src="images/dest/team/team-3.jpg", alt="Мила")
                 span.team__name Мила
                 span.team__info Тату мастер
+            
+            p.team__subtitle Наши услуги?
+            p.team__text В наших студиях вы можете сделать качественную татуировку, обновить старое тату, исправить тату, откорректировать тату, перекрыть шрам или неудачное тату (портак).Также наша студия предоставляет такие услуги как удаление тату. 
 
 
-        section.portfollio
+        section.portfolio
             .portfolio__header
               .container
                 h2.title.portfolio__title Портфолио
@@ -62,67 +66,69 @@ html(lang="ru")
             ul.portfolio__content
               li.portfolio__item.r
                 img.portfolio__img(src="images/dest/portfolio/r.jpg", alt="Картинка")
-                a.order.portfolio__order(href="#") Записаться к 
+                a.order.portfolio__order(href="tel:+3806765252222") Записаться
                 
               li.portfolio__item.s
                 img.portfolio__img(src="images/dest/portfolio/sp.jpg", alt="Картинка")
-                a.order.portfolio__order(href="#") Записаться к 
+                a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
               li.portfolio__item.r
                 img.portfolio__img(src="images/dest/portfolio/r2.jpg", alt="Картинка")
-                a.order.portfolio__order(href="#") Записаться к 
+                a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
               li.portfolio__item.s
                 img.portfolio__img(src="images/dest/portfolio/sp2.jpg", alt="Картинка")
-                a.order.portfolio__order(href="#") Записаться к 
+                a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
               li.portfolio__item.r
                 img.portfolio__img(src="images/dest/portfolio/r3.jpg", alt="Картинка")
-                a.order.portfolio__order(href="#") Записаться к 
+                a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
               li.portfolio__item.n
                 img.portfolio__img(src="images/dest/portfolio/n.jpg", alt="Картинка")
-                a.order.portfolio__order(href="#") Записаться к 
+                a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
               li.portfolio__item.k
                 img.portfolio__img(src="images/dest/portfolio/k.jpg", alt="Картинка")
-                a.order.portfolio__order(href="#") Записаться к 
+                a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
               li.portfolio__item.n
                 img.portfolio__img(src="images/dest/portfolio/n2.jpg", alt="Картинка")
-                a.order.portfolio__order(href="#") Записаться к 
+                a.order.portfolio__order(href="tel:+3806765252222") Записаться 
                 
               li.portfolio__item.k
                 img.portfolio__img(src="images/dest/portfolio/k.jpg", alt="Картинка")
-                a.order.portfolio__order(href="#") Записаться к 
-            a.portdolio__more Показать больше работ
+                a.order.portfolio__order(href="tel:+3806765252222") Записаться 
+            a.portfolio__more Показать больше работ
         
         section.price
           .container
             h2.title.price__title Сколько стоит тaту?
             .price__inner
               .price__text
-                 p Нам плевать, какая стоимость тaту у вашего соседа, кента или сестры,  и  у других мастеров города. Тaтуировка – это не просто украшение, а выражение индивидуальности, то, что останется с тобою на всю жизнь, поэтому она не может предлагаться по цене ширпотреба! В наше время тату это художественное произведение, искусство. Забудьте о старых тюремных "портаках", и других примитивных понятий. Забудьте о примитиве вообще,заходя в нашу студию. Мы не ищем легких путей. Наши мастера  каждым днем обновляют запас знаний, накапливают опыт, оттачивают профессионализм. Если хочешь сдeлaть тaту в Хaрькове нeдорого, то скорей всего это не к нам. К нам обращаться впервую очередь с вопросом цены тоже не правильно. На первом месте у каждого должно быть качество, крутость исполнения, профессиональный подход. И только потом цена! Это же ваше тело. Относитесь к нему уважительно.  Без проблем после сеанса у левого "мастера-фломастера" - милости просим к нам на удаление партаков или на сеансы перекрытия, что обойдется значительно дороже.  Лучше поднакокопить определенную сумму и сделать шедевр, чем по быстрому у кого-то дешево сделать портак! Тату это не просто твой аксессуар, но и гордость!
-              a.price__video
+                 p Цeна в тaту сaлоне – это не только расходный материал. Это еще истерильность, гарантии безопасности, современное оборудование, помощь мастера в выборе и доработке эскиза, консультации. Конечная цель нашей работы – крутая и неповторимая татуировка, которая будет вызывать у твоих друзей и знакомых зависть, восторг, уважение! А это невозможно без участия людей, которые по праву считаются лучшими в своем деле.
+              .price__video
+                <iframe width="100%" height="300px" src="https://www.youtube.com/embed/-D9Y3u_m6Is" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-            h2.title.price__title Сколько стоит тaту?
-            .price__inner.price__inner--bg(style="background-image:url('imagesdest/pricebg.jpg')")
-              .price__text
-                p Цeна в тaту сaлоне – это не только расходный материал. Это еще истерильность, гарантии безопасности, современное оборудование, помощь мастера в выборе и доработке эскиза, консультации. Конечная цель нашей работы – крутая и неповторимая татуировка, которая будет вызывать у твоих друзей и знакомых зависть, восторг, уважение! А это невозможно без участия людей, которые по праву считаются лучшими в своем деле.
+            h2.title.price__title От чего зависит стоимость?
+            .price__inner.price__inner--bg(style="background-image:url('images/dest/p.jpg')")
+              .price__text.price__text--right
+                p Нам плевать, какая стоимость тaту у вашего соседа, кента или сестры,  и  у других мастеров города. Тaтуировка – это не просто украшение, а выражение индивидуальности, то, что останется с тобою на всю жизнь, поэтому она не может предлагаться по цене ширпотреба! В наше время тату это художественное произведение, искусство. Забудьте о старых тюремных "портаках", и других примитивных понятий. Забудьте о примитиве вообще,заходя в нашу студию. Мы не ищем легких путей. Наши мастера  каждым днем обновляют запас знаний, накапливают опыт, оттачивают профессионализм. Если хочешь сдeлaть тaту в Хaрькове нeдорого, то скорей всего это не к нам. К нам обращаться впервую очередь с вопросом цены тоже не правильно. На первом месте у каждого должно быть качество, крутость исполнения, профессиональный подход. И только потом цена! Это же ваше тело. Относитесь к нему уважительно.  Без проблем после сеанса у левого "мастера-фломастера" - милости просим к нам на удаление партаков или на сеансы перекрытия, что обойдется значительно дороже.  Лучше поднакокопить определенную сумму и сделать шедевр, чем по быстрому у кого-то дешево сделать портак! Тату это не просто твой аксессуар, но и гордость!
 
         section.contact
           .container
             h2.title.contact__title Нужна консультация?
             .contact__inner
               form.contact__form(action="#")
-                input.contact__input(placeholder="ИМЯ", type="text")                
-                input.contact__input(placeholder="EMAIL", type="text")   
-                textarea.contact__text(placeholder="ВАШЕ СООБЩЕНИЕ" cols="30", rows="10")
+                input.contact__input(type="text", placeholder="ИМЯ")                
+                input.contact__input(type="text", placeholder="EMAIL")   
+                textarea.contact__text(placeholder="ВАШЕ СООБЩЕНИЕ", cols="30", rows="10")
                 button.contact__btn(type="submit")   
 
-              .contact__map
+              .contact__map#map
 
             address.contact__address просрект Победы, 42а
+          
 
         
 

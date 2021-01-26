@@ -3,8 +3,11 @@ const { src, dest, parallel, series, watch } = require("gulp");
 
 const pug = require("gulp-pug");
 const browserSync = require("browser-sync").create();
+const bssi = require("browsersync-ssi"); //dont work
 const concat = require("gulp-concat");
 const babel = require("gulp-babel");
+const plumber = require("gulp-plumber");
+const notify = require("gulp-notify");
 const sourcemaps = require("gulp-sourcemaps");
 const uglify = require("gulp-uglify-es").default;
 const sass = require("gulp-sass");
@@ -12,6 +15,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const cleancss = require("gulp-clean-css");
 const size = require("gulp-size");
 const imagemin = require("gulp-imagemin");
+const newer = require("gulp-newer");
 const recompress = require("imagemin-jpeg-recompress");
 const pngquant = require("imagemin-pngquant");
 const del = require("del");
@@ -33,15 +37,20 @@ function browsersync() {
     server: {
       baseDir: "./app",
       index: "index.html",
+      middleware: bssi({ baseDir: "app/", ext: ".html" }),
     }, // Папка сервера (Исходные файлы)
     notify: false,
     online: true,
     open: false,
+    // tunnel: "cloudy1gor", // URL https://cloudy1gor.loca.lt
   });
 }
 
 function html() {
   return src("app/pug/pages/*.pug")
+    .pipe(
+      plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
+    )
     .pipe(
       pug({
         pretty: true,
@@ -61,6 +70,9 @@ function html() {
 
 function scripts() {
   return src(jsFiles)
+    .pipe(
+      plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
+    )
     .pipe(babel({ presets: ["@babel/env"] }))
     .pipe(concat("main.min.js"))
     .pipe(uglify()) // Сжатие JavaScript кода
@@ -78,6 +90,9 @@ function scripts() {
 
 function styles() {
   return src("app/scss/style.scss")
+    .pipe(
+      plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
+    )
     .pipe(sourcemaps.init())
     .pipe(
       sass({
@@ -126,6 +141,10 @@ function styles() {
 function images() {
   return src("app/images/src/**/*")
     .pipe(
+      plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
+    )
+    .pipe(newer("app/images/dest")) // не сжимать изображение повторно
+    .pipe(
       imagemin(
         {
           interlaced: true,
@@ -166,6 +185,9 @@ function images() {
 function svg2sprite() {
   return src("app/images/src/icons/*.svg")
     .pipe(
+      plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
+    )
+    .pipe(
       svgmin({
         plugins: [
           {
@@ -198,15 +220,30 @@ function svg2sprite() {
 }
 
 function towoff() {
-  return src("app/fonts/*.ttf").pipe(ttf2woff()).pipe(dest("app/fonts/"));
+  return src("app/fonts/*.ttf")
+    .pipe(
+      plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
+    )
+    .pipe(ttf2woff())
+    .pipe(dest("app/fonts/"));
 }
 
 function towoff2() {
-  return src("app/fonts/*.ttf").pipe(ttf2woff2()).pipe(dest("app/fonts/"));
+  return src("app/fonts/*.ttf")
+    .pipe(
+      plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
+    )
+    .pipe(ttf2woff2())
+    .pipe(dest("app/fonts/"));
 }
 
 function toeot() {
-  return src("app/fonts/*.ttf").pipe(ttf2eot()).pipe(dest("app/fonts/"));
+  return src("app/fonts/*.ttf")
+    .pipe(
+      plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
+    )
+    .pipe(ttf2eot())
+    .pipe(dest("app/fonts/"));
 }
 
 function cleanimg() {

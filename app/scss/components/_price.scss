@@ -1,0 +1,39 @@
+.price {
+  margin: 60px 0;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    &--bg {
+      @include bg($position: left center, $size: 50%);
+      min-height: 600px;
+    }
+  }
+
+  &__text {
+    padding-right: 25px;
+    max-width: 50%;
+    font-size: 16px;
+    letter-spacing: 2px;
+
+    &::first-letter {
+      margin-right: 2px;
+      font-weight: 700;
+      font-size: 17px;
+      color: $accent-color;
+    }
+
+    &--right {
+      margin-left: auto;
+      padding-left: 25px;
+    }
+  }
+
+  &__video {
+    min-width: 50%;
+  }
+}

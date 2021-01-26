@@ -1,0 +1,16 @@
+.footer {
+  padding: 60px 0;
+  background-color: $bg-color;
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    color: $title-color;
+  }
+}
