@@ -13,17 +13,19 @@ var mySwiper = new Swiper(".swiper-container", {
 //фильтрация
 const filterBox = document.querySelectorAll(".portfolio__item");
 
-document.querySelector("nav").addEventListener("click", (event) => {
-  if (event.target.tagName !== "LI") return false;
-  let filterClass = event.target.dataset["f"];
+document
+  .querySelector(".portfolio__filter")
+  .addEventListener("click", (event) => {
+    if (event.target.tagName !== "LI") return false;
+    let filterClass = event.target.dataset["f"];
 
-  filterBox.forEach((elem) => {
-    elem.classList.remove("hide");
-    if (!elem.classList.contains(filterClass) && filterClass !== "all") {
-      elem.classList.add("hide");
-    }
+    filterBox.forEach((elem) => {
+      elem.classList.remove("portfolio__item--hide");
+      if (!elem.classList.contains(filterClass) && filterClass !== "all") {
+        elem.classList.add("portfolio__item--hide");
+      }
+    });
   });
-});
 
 // карта
 // When the window has finished loading create our google map below

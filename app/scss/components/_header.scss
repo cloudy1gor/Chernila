@@ -11,6 +11,9 @@
     left: 10%;
     top: 20%;
     z-index: 2;
+    border: 2px solid #000;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   &__title {
@@ -19,19 +22,28 @@
     font-size: 72px;
     line-height: 88px;
     text-shadow: 1px 2px 2px $title-color;
-    color: #000;
+    text-transform: uppercase;
+    color: #fff;
     @extend %m500;
   }
 
   &__subtitle {
     display: block;
-    margin: 0 0 60px 150px;
-    font-size: 16px;
+    margin: 0 0 20px 150px;
+    font-size: 18px;
     line-height: 20px;
     letter-spacing: 3px;
     text-shadow: 1px 2px 2px $title-color;
     color: #fcbb08;
     @extend %m700;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    max-width: 400px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #fff;
   }
 
   &__pic {

@@ -4,9 +4,10 @@
   background-color: $bg-color;
 
   &__filter {
-    margin: 0 auto;
-    margin-bottom: 35px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 55px;
   }
 
   &__btn {
@@ -29,18 +30,28 @@
   }
 
   &__content {
-    display: grid;
-    grid-gap: 15px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    // display: grid;
+    // grid-gap: 15px;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
     margin: 0 auto 25px;
-    padding: 15px;
-    max-width: 1500px;
   }
 
   &__item {
     position: relative;
-    max-width: calc(100vh - 25px);
+    width: calc(33% - 30px);
+
+    &:not(:last-child) {
+      margin: 0 15px 15px 0;
+    }
+
+    &--hide {
+      display: none;
+    }
   }
 
   &__img {
