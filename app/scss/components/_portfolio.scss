@@ -11,8 +11,10 @@
   }
 
   &__btn {
+    @include txt(1);
     border: 1px solid $default-color;
     padding: 10px 30px;
+    max-width: 300px;
     font-size: 16px;
     color: $title-color;
     background-color: #fff;
@@ -84,10 +86,12 @@
   }
 
   &__more {
+    @include txt(1);
     display: block;
     margin: 0 auto;
     padding: 15px 60px;
     max-width: 30%;
+    max-height: 68px;
     text-align: center;
     text-transform: uppercase;
     color: #fff;

@@ -20,6 +20,10 @@
     font-size: 16px;
     letter-spacing: 2px;
 
+    p {
+      @include txt(22);
+    }
+
     &::first-letter {
       margin-right: 2px;
       font-weight: 700;

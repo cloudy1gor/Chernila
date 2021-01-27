@@ -74,9 +74,8 @@ body {
     }
 
     .logo__text {
-      @include txt(1);
       display: block;
-      max-width: 200px;
+
       color: $title-color;
     }
   }
@@ -88,6 +87,8 @@ body {
   }
 
   &__text {
+    @include txt(1);
+    max-width: 300px;
     font-size: 24px;
     color: $accent-color;
     transition: all 0.6s;
@@ -96,10 +97,12 @@ body {
 }
 
 .title {
+  @include txt(1);
   position: relative;
   align-self: flex-start;
   margin-bottom: 60px;
   padding-bottom: 18px;
+  max-width: 1300px;
   font-size: 60px;
   line-height: 75px;
   letter-spacing: -1.65px;

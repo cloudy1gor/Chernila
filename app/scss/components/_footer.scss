@@ -1,4 +1,6 @@
 .footer {
+  position: relative;
+  z-index: 3;
   padding: 40px 0;
   background-color: #000;
 
@@ -19,8 +21,10 @@
   }
 
   &__link {
+    @include txt(1);
     border-bottom: 1px solid transparent;
     padding: 10px 15px;
+    max-width: 300px;
     text-transform: uppercase;
     color: #fff;
     transition: all 0.5s;
