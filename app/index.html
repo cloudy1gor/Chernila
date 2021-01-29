@@ -8,6 +8,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="overlay"> </div>
       <header class="header">
         <nav class="menu">
           <div class="container">
@@ -16,17 +17,42 @@
                   <use xlink:href="images/dest/sprite.svg#skull"></use>
                 </svg><span class="logo__text">Чернила</span></a>
               <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Портфоллио</a></li>
+                <li class="menu__item"><a class="menu__link" href="/">Главная</a></li>
+                <li class="menu__item"><a class="menu__link menu__link--drop" href="#">Услуги
+                    <ul class="menu__list menu__list--dropdown dropdown-list dropdown-submenu">
+                      <li class="dropdown-list__item mobile-back"><a class="dropdown-list__link mobile-back__link">Назад</a></li>
+                      <li class="dropdown-submenu__item">
+                        <p class="dropdown-submenu__title">Процедуры</p>
+                        <ul class="dropdown-submenu__list">
+                          <li class="dropdown-submenu-list__item"><a href="#">Татуировка</a></li>
+                          <li class="dropdown-submenu-list__item"><a href="#">Пирсинг</a></li>
+                          <li class="dropdown-submenu-list__item"><a href="#">Шрамирование</a></li>
+                          <li class="dropdown-submenu-list__item"><a href="#">Удаление тату</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu__item">
+                        <p class="dropdown-submenu__title">Экспертная оценка</p>
+                        <ul class="dropdown-submenu__list">
+                          <li class="dropdown-submenu-list__item"><a href="#">Консультация</a></li>
+                          <li class="dropdown-submenu-list__item"><a href="#">Создание эскиза</a></li>
+                          <li class="dropdown-submenu-list__item"><a href="#">Модификация эскиза</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu__item">
+                        <p class="dropdown-submenu__title">Уникальное предложение</p><a class="dropdown-submenu__banner" href="#"><img src="images/dest/banner.jpg" alt="banner"/></a>
+                      </li>
+                    </ul></a></li>
+                <li class="menu__item"><a class="menu__link menu__link--drop" href="#">Информация
+                    <ul class="menu__list--dropdown dropdown-list">
+                      <li class="dropdown-list__item mobile-back"><a class="dropdown-list__link mobile-back__link" href="#"></a></li>
+                      <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Как выбрать тату?</a></li>
+                      <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Отзывы в социальных сетях</a></li>
+                      <li class="dropdown-list__item"><a class="dropdown-list__link" href="#">Подюор по фото</a></li>
+                    </ul></a></li>
                 <li class="menu__item"><a class="menu__link" href="#">Команда</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
                 <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
-                <button class="menu__btn">
-                  <svg>
-                    <use xlink:href="images/dest/sprite.svg#menu"></use>
-                  </svg>
-                </button>
               </ul>
+              <button class="menu__burger"><span></span></button>
             </div>
           </div>
         </nav>
