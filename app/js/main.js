@@ -124,3 +124,11 @@ function init() {
     title: "Snazzy!",
   });
 }
+
+// бургер
+const menuNav = document.querySelector(".menu__nav");
+const menuBurger = document.querySelector(".menu__burger");
+
+menuBurger.addEventListener("click", () => {
+  menuNav.classList.toggle("menu__nav--active");
+});
