@@ -9,6 +9,9 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 35px;
+    @include mq("560") {
+      flex-wrap: wrap;
+    }
   }
 
   &__address {
@@ -42,6 +45,9 @@
     padding-bottom: 10px;
     font-size: 18px;
     color: $accent-color;
+    @include mq("560") {
+      margin-right: 0;
+    }
     @extend %o300;
   }
 

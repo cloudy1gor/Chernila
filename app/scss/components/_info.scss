@@ -2,16 +2,27 @@
   margin-bottom: 100px;
   padding: 100px 0 50px;
   background-color: $bg-color;
+  @include mq("768") {
+    margin-bottom: 50px;
+    padding-top: 60px;
+  }
 
   &__inner {
     @include bg($size: 40%, $position: left center);
     display: flex;
     flex-direction: column;
+    @include mq("768") {
+      background-size: cover;
+    }
   }
 
   &__content {
     margin-left: auto;
     max-width: 50%;
+    @include mq("768") {
+      margin: 0 auto;
+      max-width: 90%;
+    }
   }
 
   &__list {
@@ -20,17 +31,24 @@
 
   &__text {
     @include txt(10);
+
+    &::first-letter {
+      margin-right: 2px;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 17px;
+      color: $accent-color;
+    }
+    @include mq("768") {
+      margin: 35px auto;
+      padding: 20px;
+      min-width: 90%;
+      background-color: $bg-color;
+      opacity: 0.9;
+    }
   }
 
   &__item:not(:last-child) {
     margin-bottom: 15px;
-  }
-
-  &__text::first-letter {
-    margin-right: 2px;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 17px;
-    color: $accent-color;
   }
 }

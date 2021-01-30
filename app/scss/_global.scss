@@ -123,6 +123,18 @@ body {
   line-height: 75px;
   letter-spacing: -1.65px;
   color: $title-color;
+  @include mq("768") {
+    @include txt(2);
+    margin-bottom: 30px;
+    font-size: 40px;
+    line-height: 44px;
+  }
+  @include mq("560") {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    line-height: 34px;
+  }
 
   &::after {
     @include pseudo();

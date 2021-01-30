@@ -125,7 +125,7 @@ function init() {
   });
 }
 
-// бургер
+// бургер меню
 const menuNav = document.querySelector(".menu__nav");
 const menuBurger = document.querySelector(".menu__burger");
 

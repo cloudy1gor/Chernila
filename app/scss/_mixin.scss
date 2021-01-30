@@ -71,6 +71,7 @@ $breakpoints: (
   "768": 768px,
   "1024": 1024px,
   "1248": 1248px,
+  "1320": 1320px,
   "1920": 1920px,
 );
 @mixin mq($width, $type: max) {

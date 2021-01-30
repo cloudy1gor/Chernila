@@ -14,6 +14,9 @@
     border: 2px solid #000;
     box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.75);
     background-color: rgba(0, 0, 0, 0.3);
+    @include mq("768") {
+      left: 0;
+    }
   }
 
   &__title {
@@ -26,6 +29,14 @@
     text-shadow: 1px 2px 2px $title-color;
     text-transform: uppercase;
     color: #000;
+    @include mq("768") {
+      font-size: 60px;
+      line-height: 70px;
+    }
+    @include mq("560") {
+      font-size: 40px;
+      line-height: 50px;
+    }
     @extend %m500;
   }
 
@@ -40,6 +51,9 @@
     letter-spacing: 3px;
     text-shadow: 1px 2px 2px $title-color;
     color: #fcbb08;
+    @include mq("560") {
+      font-size: 20px;
+    }
     @extend %m700;
   }
 
